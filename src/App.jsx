@@ -1,7 +1,8 @@
+import Map from "./components/Map";
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <Map />
     </>
   );
 }
