@@ -19,7 +19,6 @@ export default function LayerGempa() {
 
       const data = await res.json();
       const gempaGeoJSON = convertToGeoJSON(data);
-      console.log("Data API BMKG:", gempaGeoJSON);
       setDataGempa(gempaGeoJSON);
     } catch (error) {
       console.error("Error fetching gempa data:", error);
@@ -53,7 +52,7 @@ export default function LayerGempa() {
       <GeoJSON
         key={JSON.stringify(dataGempa)}
         data={dataGempa}
-        attribution="&copy; BMKG - Badan Meteorologi, Klimatologi, dan Geofisika"
+        attribution="&copy; <a target='_blank' href='https://data.bmkg.go.id/gempabumi/'>BMKG</a>"
         pointToLayer={(feature, latlng) => {
           const magnitude = feature.properties.magnitude || 0;
 

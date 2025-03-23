@@ -9,7 +9,12 @@ export default function Basemaps() {
   const position = [0, 120];
 
   return (
-    <MapContainer center={position} zoom={5} style={{ height: "100dvh" }}>
+    <MapContainer
+      center={position}
+      zoomControl={false}
+      zoom={5}
+      style={{ height: "100dvh" }}
+    >
       <OSMTileLayer />
       <LayerGempa />
     </MapContainer>
