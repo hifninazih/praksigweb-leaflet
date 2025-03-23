@@ -1,4 +1,4 @@
-const convertToGeoJSON = (data) => {
+export default function convertToGeoJSON(data) {
   return {
     type: "FeatureCollection",
     features: data.Infogempa.gempa.map((gempa) => ({
@@ -9,6 +9,7 @@ const convertToGeoJSON = (data) => {
         magnitude: parseFloat(gempa.Magnitude),
         kedalaman: gempa.Kedalaman,
         wilayah: gempa.Wilayah,
+        potensi: gempa.Potensi,
         dirasakan: gempa.Dirasakan,
       },
       geometry: {
@@ -17,6 +18,4 @@ const convertToGeoJSON = (data) => {
       },
     })),
   };
-};
-
-export default convertToGeoJSON;
+}
