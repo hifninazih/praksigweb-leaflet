@@ -50,11 +50,6 @@ export default function LayerGempa() {
 
   return (
     <>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution="&copy; OpenStreetMap contributors"
-      />
-
       <GeoJSON
         key={JSON.stringify(dataGempa)}
         data={dataGempa}
